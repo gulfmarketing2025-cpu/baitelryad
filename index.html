@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="بيت الرياض - متخصص في فك وتركيب الأثاث، تجميع ايكيا، تركيب الأقفال الإلكترونية، وفتح الأبواب المغلقة. اتصل الآن 0546190770">
+    <meta name="keywords" content="نجار الرياض, بيت الرياض, تركيب اثاث ايكيا, فك وتركيب اثاث, اقفال الكترونية, فتح ابواب, نجار">
+    <meta name="author" content="بيت الرياض">
+    <meta property="og:title" content="بيت الرياض - خدمات النجارة وفك وتركيب الأثاث">
+    <meta property="og:description" content="متخصص في فك وتركيب الأثاث وتجميع ايكيا وتركيب الأقفال الإلكترونية في الرياض">
+    <title>بيت الرياض | خدمات النجارة وفك وتركيب الأثاث 0546190770</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --emerald: #0d4f3c; --emerald-dark: #0a3d2f; --emerald-light: #1a6b53;
+            --champagne: #c9a961; --champagne-light: #e0c989; --champagne-dark: #a8894a;
+            --ivory: #faf7f2; --cream: #f5efe3; --warm-white: #fdfcf9;
+            --charcoal: #1a1a1a; --dark-gray: #2d2d2d; --medium-gray: #6b6b6b;
+            --shadow-soft: 0 10px 40px rgba(13, 79, 60, 0.08);
+            --shadow-medium: 0 15px 50px rgba(13, 79, 60, 0.15);
+            --shadow-strong: 0 25px 70px rgba(13, 79, 60, 0.2);
+            --emerald-gradient: linear-gradient(135deg, #0d4f3c 0%, #1a6b53 100%);
+            --champagne-gradient: linear-gradient(135deg, #c9a961 0%, #e0c989 100%);
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Tajawal', sans-serif; background: var(--warm-white); color: var(--charcoal); line-height: 1.8; overflow-x: hidden; }
+        
+        /* Loader */
+        .loader { position: fixed; inset: 0; background: var(--emerald-dark); display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.6s, visibility 0.6s; }
+        .loader.hidden { opacity: 0; visibility: hidden; }
+        .loader-content { text-align: center; color: var(--champagne); }
+        .loader-logo { font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem; letter-spacing: 2px; }
+        .loader-bar { width: 200px; height: 3px; background: rgba(201, 169, 97, 0.2); border-radius: 3px; overflow: hidden; margin: 0 auto; }
+        .loader-bar::after { content: ''; display: block; width: 40%; height: 100%; background: var(--champagne); animation: loading 1.2s ease-in-out infinite; }
+        @keyframes loading { 0% { transform: translateX(250%); } 100% { transform: translateX(-100%); } }
+        
+        /* Header */
+        .header { position: fixed; top: 0; right: 0; left: 0; background: rgba(250, 247, 242, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 1000; transition: all 0.4s; border-bottom: 1px solid transparent; }
+        .header.scrolled { background: rgba(250, 247, 242, 0.98); box-shadow: 0 5px 30px rgba(13, 79, 60, 0.08); border-bottom-color: rgba(201, 169, 97, 0.15); }
+        .nav-container { max-width: 1320px; margin: 0 auto; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.7rem; font-weight: 900; color: var(--emerald); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; letter-spacing: 1px; }
+        .logo-icon { width: 45px; height: 45px; background: var(--emerald-gradient); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--champagne); font-size: 1.3rem; position: relative; overflow: hidden; }
+        .logo-icon::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 40%, rgba(201, 169, 97, 0.3) 50%, transparent 60%); animation: shine 3s infinite; }
+        @keyframes shine { 0%, 100% { transform: translateX(-100%); } 50% { transform: translateX(100%); } }
+        .logo-text { display: flex; flex-direction: column; line-height: 1; }
+        .logo-text span:first-child { font-size: 1.5rem; font-weight: 900; }
+        .logo-text span:last-child { font-size: 0.75rem; color: var(--champagne-dark); font-weight: 500; letter-spacing: 3px; margin-top: 4px; }
+        
+        .nav-menu { display: flex; gap: 2.25rem; list-style: none; align-items: center; }
+        .nav-menu a { color: var(--charcoal); text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: color 0.3s; position: relative; }
+        .nav-menu a:hover { color: var(--emerald); }
+        .nav-menu a::before { content: ''; position: absolute; bottom: -8px; right: 50%; transform: translateX(50%); width: 0; height: 2px; background: var(--champagne); transition: width 0.3s; }
+        .nav-menu a:hover::before { width: 100%; }
+        
+        .btn-primary { background: var(--emerald-gradient); color: var(--ivory); padding: 0.85rem 1.75rem; border-radius: 12px; text-decoration: none; font-weight: 700; transition: all 0.4s; box-shadow: 0 8px 25px rgba(13, 79, 60, 0.25); border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.6rem; position: relative; overflow: hidden; }
+        .btn-primary::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--champagne) 0%, var(--champagne-light) 100%); opacity: 0; transition: opacity 0.4s; z-index: 0; }
+        .btn-primary span, .btn-primary i { position: relative; z-index: 1; }
+        .btn-primary:hover::before { opacity: 1; }
+        .btn-primary:hover { color: var(--emerald-dark); transform: translateY(-3px); box-shadow: 0 12px 35px rgba(201, 169, 97, 0.4); }
+        
+        .mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--emerald); cursor: pointer; }
+        
+        /* Hero Split Layout */
+        .hero { min-height: 100vh; background: var(--ivory); padding: 9rem 2rem 4rem; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(201, 169, 97, 0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+        .hero::after { content: ''; position: absolute; bottom: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(13, 79, 60, 0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+        
+        .hero-container { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 2; }
+        
+        .hero-content { animation: fadeInRight 1s ease; }
+        @keyframes fadeInRight { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+        
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(13, 79, 60, 0.08); border: 1px solid rgba(13, 79, 60, 0.15); padding: 0.6rem 1.25rem; border-radius: 50px; font-size: 0.9rem; color: var(--emerald); margin-bottom: 1.75rem; font-weight: 600; }
+        .hero-badge i { color: var(--champagne); }
+        
+        .hero h1 { font-size: clamp(2.75rem, 5.5vw, 4.5rem); font-weight: 900; color: var(--emerald-dark); margin-bottom: 1.25rem; line-height: 1.15; position: relative; }
+        .hero h1 .highlight { color: var(--champagne-dark); position: relative; display: inline-block; }
+        .hero h1 .highlight::after { content: ''; position: absolute; bottom: 5px; right: 0; width: 100%; height: 12px; background: rgba(201, 169, 97, 0.25); z-index: -1; border-radius: 4px; }
+        
+        .hero-tagline { font-size: 1.3rem; color: var(--emerald); font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+        .hero-tagline::before { content: ''; width: 40px; height: 2px; background: var(--champagne); }
+        
+        .hero-desc { font-size: 1.05rem; color: var(--medium-gray); line-height: 2; margin-bottom: 2.5rem; max-width: 550px; }
+        
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+        .btn-call { background: var(--emerald-gradient); color: var(--ivory); padding: 1.1rem 2.25rem; border-radius: 14px; text-decoration: none; font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 0.75rem; transition: all 0.4s; box-shadow: 0 10px 30px rgba(13, 79, 60, 0.3); }
+        .btn-call:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(13, 79, 60, 0.4); }
+        .btn-wa { background: transparent; color: var(--emerald); padding: 1.1rem 2.25rem; border-radius: 14px; text-decoration: none; font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 0.75rem; transition: all 0.4s; border: 2px solid var(--emerald); }
+        .btn-wa:hover { background: var(--emerald); color: var(--ivory); transform: translateY(-4px); }
+        
+        .hero-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 500px; }
+        .hero-feature { display: flex; align-items: center; gap: 0.75rem; color: var(--charcoal); font-weight: 600; font-size: 0.95rem; }
+        .hero-feature i { color: var(--champagne); background: rgba(201, 169, 97, 0.15); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
+        
+        .hero-visual { position: relative; animation: fadeInLeft 1s ease 0.3s both; }
+        @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
+        
+        .hero-image-wrapper { position: relative; border-radius: 30px; overflow: hidden; box-shadow: var(--shadow-strong); aspect-ratio: 4/5; }
+        .hero-image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-image-wrapper::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 50%, rgba(13, 79, 60, 0.3) 100%); }
+        
+        .hero-floating-card { position: absolute; background: var(--warm-white); padding: 1.25rem 1.5rem; border-radius: 16px; box-shadow: var(--shadow-medium); display: flex; align-items: center; gap: 1rem; border: 1px solid rgba(201, 169, 97, 0.2); }
+        .hero-floating-card.card-1 { top: 30px; right: -30px; animation: float 4s ease-in-out infinite; }
+        .hero-floating-card.card-2 { bottom: 40px; left: -30px; animation: float 4s ease-in-out infinite 2s; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        .floating-icon { width: 50px; height: 50px; background: var(--emerald-gradient); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--champagne); font-size: 1.25rem; }
+        .floating-info h4 { color: var(--emerald-dark); font-weight: 800; font-size: 1.1rem; margin-bottom: 2px; }
+        .floating-info p { color: var(--medium-gray); font-size: 0.85rem; }
+        
+        /* Sections */
+        section { padding: 6rem 2rem; position: relative; }
+        .section-container { max-width: 1320px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 4.5rem; }
+        .section-label { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--champagne-dark); font-weight: 700; font-size: 0.95rem; letter-spacing: 2px; margin-bottom: 1rem; text-transform: uppercase; }
+        .section-label::before, .section-label::after { content: ''; width: 30px; height: 1px; background: var(--champagne); }
+        .section-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--emerald-dark); margin-bottom: 1rem; line-height: 1.3; }
+        .section-subtitle { font-size: 1.1rem; color: var(--medium-gray); max-width: 700px; margin: 0 auto; line-height: 1.9; }
+        
+        /* Services - Side Border Cards */
+        .services { background: var(--ivory); position: relative; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.75rem; }
+        .service-card { background: var(--warm-white); padding: 2.5rem 2rem; border-radius: 20px; transition: all 0.4s; position: relative; overflow: hidden; border: 1px solid rgba(13, 79, 60, 0.08); }
+        .service-card::before { content: ''; position: absolute; top: 0; right: 0; width: 5px; height: 0; background: var(--champagne-gradient); transition: height 0.5s; border-radius: 0 0 5px 5px; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-medium); border-color: rgba(201, 169, 97, 0.3); }
+        .service-card:hover::before { height: 100%; }
+        
+        .service-number { position: absolute; top: 1.5rem; left: 1.5rem; font-size: 3.5rem; font-weight: 900; color: rgba(13, 79, 60, 0.06); line-height: 1; }
+        .service-icon { width: 65px; height: 65px; background: linear-gradient(135deg, rgba(13, 79, 60, 0.08) 0%, rgba(201, 169, 97, 0.12) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--emerald); font-size: 1.6rem; transition: all 0.4s; border: 1px solid rgba(201, 169, 97, 0.2); }
+        .service-card:hover .service-icon { background: var(--emerald-gradient); color: var(--champagne); transform: scale(1.1) rotate(-5deg); border-color: transparent; }
+        .service-card h3 { font-size: 1.3rem; font-weight: 800; color: var(--emerald-dark); margin-bottom: 0.85rem; }
+        .service-card p { color: var(--medium-gray); line-height: 1.85; font-size: 0.98rem; }
+        
+        /* Process Section */
+        .process { background: var(--warm-white); }
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; position: relative; }
+        .process-step { text-align: center; position: relative; padding: 2rem 1.5rem; }
+        .process-number { width: 80px; height: 80px; background: var(--warm-white); border: 2px solid var(--champagne); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.75rem; font-weight: 900; color: var(--emerald); position: relative; transition: all 0.4s; }
+        .process-step:hover .process-number { background: var(--emerald-gradient); color: var(--champagne); border-color: transparent; transform: scale(1.1); }
+        .process-step h3 { font-size: 1.2rem; font-weight: 800; color: var(--emerald-dark); margin-bottom: 0.75rem; }
+        .process-step p { color: var(--medium-gray); line-height: 1.8; font-size: 0.95rem; }
+        
+        /* Gallery */
+        .gallery { background: var(--emerald-dark); color: var(--ivory); position: relative; overflow: hidden; }
+        .gallery::before { content: ''; position: absolute; top: 0; right: 0; width: 100%; height: 100%; background: radial-gradient(circle at 80% 20%, rgba(201, 169, 97, 0.1) 0%, transparent 50%); pointer-events: none; }
+        .gallery .section-title { color: var(--ivory); }
+        .gallery .section-subtitle { color: rgba(250, 247, 242, 0.7); }
+        
+        .gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 180px; gap: 1.25rem; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 18px; cursor: pointer; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); transition: all 0.5s; }
+        .gallery-item:nth-child(1) { grid-column: span 5; grid-row: span 2; }
+        .gallery-item:nth-child(2) { grid-column: span 4; grid-row: span 1; }
+        .gallery-item:nth-child(3) { grid-column: span 3; grid-row: span 1; }
+        .gallery-item:nth-child(4) { grid-column: span 3; grid-row: span 1; }
+        .gallery-item:nth-child(5) { grid-column: span 4; grid-row: span 1; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s; }
+        .gallery-item:hover { transform: scale(1.02); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); }
+        .gallery-item:hover img { transform: scale(1.15); }
+        .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10, 61, 47, 0.95) 0%, transparent 60%); display: flex; align-items: flex-end; padding: 1.5rem; opacity: 0; transition: opacity 0.4s; }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-overlay-content { color: var(--ivory); }
+        .gallery-overlay h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; }
+        .gallery-overlay p { font-size: 0.85rem; color: var(--champagne-light); }
+        
+        .lightbox { display: none; position: fixed; inset: 0; background: rgba(10, 61, 47, 0.95); backdrop-filter: blur(10px); z-index: 9999; justify-content: center; align-items: center; padding: 2rem; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90vh; border-radius: 15px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6); }
+        .lightbox-close { position: absolute; top: 2rem; left: 2rem; background: var(--champagne); color: var(--emerald-dark); width: 55px; height: 55px; border-radius: 50%; border: none; font-size: 1.5rem; cursor: pointer; transition: all 0.3s; }
+        .lightbox-close:hover { transform: rotate(90deg) scale(1.1); }
+        
+        /* Why Us - Hexagon Style */
+        .why-us { background: var(--cream); position: relative; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; }
+        .feature-card { background: var(--warm-white); padding: 2.5rem 2rem; border-radius: 20px; text-align: center; transition: all 0.4s; position: relative; overflow: hidden; border: 1px solid rgba(13, 79, 60, 0.08); }
+        .feature-card::after { content: ''; position: absolute; bottom: 0; right: 0; width: 100%; height: 4px; background: var(--champagne-gradient); transform: scaleX(0); transform-origin: right; transition: transform 0.4s; }
+        .feature-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-medium); }
+        .feature-card:hover::after { transform: scaleX(1); }
+        .feature-icon { width: 75px; height: 75px; background: var(--emerald-gradient); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--champagne); font-size: 1.75rem; transition: all 0.4s; transform: rotate(45deg); }
+        .feature-icon i { transform: rotate(-45deg); }
+        .feature-card:hover .feature-icon { background: var(--champagne-gradient); color: var(--emerald-dark); transform: rotate(0deg); border-radius: 50%; }
+        .feature-card:hover .feature-icon i { transform: rotate(0deg); }
+        .feature-card h3 { font-size: 1.25rem; font-weight: 800; color: var(--emerald-dark); margin-bottom: 0.75rem; }
+        .feature-card p { color: var(--medium-gray); line-height: 1.85; font-size: 0.98rem; }
+        
+        /* Testimonials Carousel */
+        .testimonials { background: var(--warm-white); }
+        .testimonials-wrapper { position: relative; max-width: 900px; margin: 0 auto; }
+        .testimonials-track { overflow: hidden; border-radius: 24px; }
+        .testimonials-slides { display: flex; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .testimonial-card { min-width: 100%; background: linear-gradient(135deg, var(--emerald-dark) 0%, var(--emerald) 100%); color: var(--ivory); padding: 3.5rem 3rem; position: relative; overflow: hidden; }
+        .testimonial-card::before { content: '"'; position: absolute; top: 1rem; right: 2rem; font-size: 10rem; color: rgba(201, 169, 97, 0.15); font-family: Georgia, serif; line-height: 1; }
+        .testimonial-stars { color: var(--champagne); margin-bottom: 1.5rem; font-size: 1.2rem; }
+        .testimonial-text { font-size: 1.2rem; line-height: 2; margin-bottom: 2rem; font-style: italic; position: relative; z-index: 2; }
+        .testimonial-author { display: flex; align-items: center; gap: 1.25rem; padding-top: 1.5rem; border-top: 1px solid rgba(201, 169, 97, 0.2); }
+        .author-avatar { width: 60px; height: 60px; background: var(--champagne-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--emerald-dark); font-size: 1.5rem; font-weight: 900; }
+        .author-info h4 { color: var(--ivory); font-weight: 700; margin-bottom: 0.2rem; font-size: 1.1rem; }
+        .author-info span { color: var(--champagne-light); font-size: 0.9rem; }
+        .testimonials-nav { display: flex; justify-content: center; gap: 0.75rem; margin-top: 2rem; }
+        .testimonial-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(13, 79, 60, 0.2); border: none; cursor: pointer; transition: all 0.3s; }
+        .testimonial-dot.active { background: var(--emerald); width: 35px; border-radius: 6px; }
+        
+        /* FAQ - Different Style */
+        .faq { background: var(--ivory); }
+        .faq-container { max-width: 900px; margin: 0 auto; }
+        .faq-item { background: var(--warm-white); border-radius: 16px; margin-bottom: 1rem; overflow: hidden; transition: all 0.4s; border: 1px solid rgba(13, 79, 60, 0.08); }
+        .faq-item.active { background: var(--emerald-dark); color: var(--ivory); box-shadow: var(--shadow-medium); border-color: transparent; }
+        .faq-question { padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--emerald-dark); font-size: 1.1rem; transition: color 0.3s; }
+        .faq-item.active .faq-question { color: var(--champagne); }
+        .faq-question i { color: var(--champagne); transition: transform 0.4s; font-size: 1rem; width: 35px; height: 35px; background: rgba(201, 169, 97, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .faq-item.active .faq-question i { background: var(--champagne); color: var(--emerald-dark); transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; padding: 0 2rem; }
+        .faq-item.active .faq-answer { max-height: 500px; padding: 0 2rem 1.5rem; }
+        .faq-answer p { color: var(--medium-gray); line-height: 1.9; }
+        .faq-item.active .faq-answer p { color: rgba(250, 247, 242, 0.85); }
+        
+        /* Service Areas */
+        .areas { background: var(--warm-white); }
+        .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+        .area-card { background: var(--ivory); padding: 1.5rem 1rem; border-radius: 14px; text-align: center; transition: all 0.3s; border: 1px solid rgba(13, 79, 60, 0.08); cursor: pointer; }
+        .area-card:hover { background: var(--emerald-gradient); color: var(--ivory); transform: translateY(-5px); box-shadow: var(--shadow-medium); border-color: transparent; }
+        .area-card i { color: var(--champagne); font-size: 1.5rem; margin-bottom: 0.75rem; display: block; transition: transform 0.3s; }
+        .area-card:hover i { transform: scale(1.2); }
+        .area-card h4 { font-weight: 700; font-size: 1rem; }
+        
+        /* Contact CTA */
+        .contact-cta { background: var(--emerald-dark); color: var(--ivory); padding: 6rem 2rem; position: relative; overflow: hidden; }
+        .contact-cta::before { content: ''; position: absolute; top: -50%; left: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201, 169, 97, 0.15) 0%, transparent 70%); pointer-events: none; }
+        .contact-cta::after { content: ''; position: absolute; bottom: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201, 169, 97, 0.1) 0%, transparent 70%); pointer-events: none; }
+        .contact-cta-content { max-width: 800px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
+        .contact-cta h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 1.5rem; color: var(--ivory); }
+        .contact-cta h2 span { color: var(--champagne); }
+        .contact-cta p { font-size: 1.1rem; line-height: 2; margin-bottom: 2.5rem; opacity: 0.9; }
+        .contact-phone { display: inline-flex; align-items: center; gap: 1rem; background: rgba(201, 169, 97, 0.15); backdrop-filter: blur(20px); border: 2px solid var(--champagne); padding: 1.25rem 2.5rem; border-radius: 16px; margin-bottom: 2rem; font-size: 1.75rem; font-weight: 900; color: var(--champagne); direction: ltr; letter-spacing: 2px; }
+        .contact-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn-cta-primary { background: var(--champagne-gradient); color: var(--emerald-dark); padding: 1.1rem 2.5rem; border-radius: 14px; text-decoration: none; font-weight: 800; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 0.75rem; transition: all 0.4s; box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3); }
+        .btn-cta-primary:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(201, 169, 97, 0.5); }
+        .btn-cta-secondary { background: transparent; color: var(--ivory); padding: 1.1rem 2.5rem; border-radius: 14px; text-decoration: none; font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 0.75rem; transition: all 0.4s; border: 2px solid rgba(250, 247, 242, 0.3); }
+        .btn-cta-secondary:hover { background: var(--ivory); color: var(--emerald-dark); border-color: var(--ivory); transform: translateY(-4px); }
+        
+        /* Footer */
+        .footer { background: var(--charcoal); color: var(--ivory); padding: 4rem 2rem 1.5rem; position: relative; }
+        .footer::before { content: ''; position: absolute; top: 0; right: 0; width: 100%; height: 3px; background: var(--champagne-gradient); }
+        .footer-container { max-width: 1320px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-size: 1.75rem; font-weight: 900; margin-bottom: 1rem; color: var(--champagne); display: flex; align-items: center; gap: 0.75rem; }
+        .footer-brand h3 i { background: var(--champagne); color: var(--emerald-dark); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+        .footer-brand p { color: rgba(250, 247, 242, 0.7); line-height: 1.9; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 0.75rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(250, 247, 242, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--ivory); text-decoration: none; transition: all 0.3s; }
+        .footer-social a:hover { background: var(--champagne); color: var(--emerald-dark); transform: translateY(-3px); }
+        .footer-section h4 { font-size: 1.15rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--champagne); position: relative; padding-bottom: 0.75rem; }
+        .footer-section h4::after { content: ''; position: absolute; bottom: 0; right: 0; width: 30px; height: 2px; background: var(--champagne); }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.85rem; }
+        .footer-section ul li a { color: rgba(250, 247, 242, 0.7); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.6rem; }
+        .footer-section ul li a::before { content: '\f105'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--champagne); font-size: 0.8rem; }
+        .footer-section ul li a:hover { color: var(--champagne); transform: translateX(-5px); }
+        .footer-contact-item { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1.1rem; color: rgba(250, 247, 242, 0.8); }
+        .footer-contact-item i { color: var(--champagne); font-size: 1.1rem; width: 38px; height: 38px; background: rgba(201, 169, 97, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .footer-contact-item a { color: inherit; text-decoration: none; direction: ltr; }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(250, 247, 242, 0.1); text-align: center; color: rgba(250, 247, 242, 0.6); font-size: 0.95rem; }
+        .footer-bottom a { color: var(--champagne); text-decoration: none; font-weight: 700; }
+        .footer-bottom a:hover { text-decoration: underline; }
+        
+        /* Floating Buttons */
+        .floating-btns { position: fixed; bottom: 2rem; left: 2rem; display: flex; flex-direction: column; gap: 1rem; z-index: 999; }
+        .float-btn { width: 60px; height: 60px; border-radius: 18px; display: flex; align-items: center; justify-content: center; color: var(--warm-white); font-size: 1.6rem; text-decoration: none; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); transition: all 0.4s; position: relative; overflow: hidden; }
+        .float-btn.whatsapp { background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); }
+        .float-btn.call { background: var(--emerald-gradient); color: var(--champagne); }
+        .float-btn:hover { transform: translateY(-5px) scale(1.05); border-radius: 22px; }
+        .float-btn::before { content: ''; position: absolute; inset: 0; background: inherit; opacity: 0.6; animation: pulse 2s infinite; z-index: -1; border-radius: inherit; }
+        @keyframes pulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.5); opacity: 0; } }
+        
+        /* Reveal Animation */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-menu { position: fixed; top: 80px; right: -100%; width: 85%; max-width: 380px; height: calc(100vh - 80px); background: var(--warm-white); flex-direction: column; padding: 2.5rem 2rem; box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1); transition: right 0.4s; align-items: flex-start; gap: 1.5rem; }
+            .nav-menu.active { right: 0; }
+            .mobile-toggle { display: block; }
+            .hero-container { grid-template-columns: 1fr; gap: 3rem; }
+            .hero-visual { order: -1; max-width: 500px; margin: 0 auto; }
+            .hero-floating-card.card-1 { right: 10px; }
+            .hero-floating-card.card-2 { left: 10px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+            .gallery-grid { grid-template-columns: repeat(6, 1fr); }
+            .gallery-item:nth-child(1) { grid-column: span 6; grid-row: span 1; }
+            .gallery-item:nth-child(2) { grid-column: span 3; }
+            .gallery-item:nth-child(3) { grid-column: span 3; }
+            .gallery-item:nth-child(4) { grid-column: span 3; }
+            .gallery-item:nth-child(5) { grid-column: span 3; }
+        }
+        @media (max-width: 640px) {
+            section { padding: 4rem 1.25rem; }
+            .hero { padding: 7rem 1.25rem 3rem; }
+            .hero-buttons { flex-direction: column; }
+            .btn-call, .btn-wa { width: 100%; justify-content: center; }
+            .hero-features { grid-template-columns: 1fr; }
+            .floating-btns { bottom: 1.25rem; left: 1.25rem; }
+            .float-btn { width: 55px; height: 55px; font-size: 1.4rem; }
+            .contact-phone { font-size: 1.35rem; padding: 1rem 1.75rem; }
+            .nav-container { padding: 1rem 1.25rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .testimonial-card { padding: 2.5rem 1.75rem; }
+            .testimonial-text { font-size: 1.05rem; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">بيت الرياض</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-hammer"></i></div>
+                <div class="logo-text">
+                    <span>بيت الرياض</span>
+                    <span>RIYADH HOUSE</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#gallery">أعمالنا</a></li>
+                <li><a href="#why-us">لماذا نحن</a></li>
+                <li><a href="#testimonials">العملاء</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="tel:0546190770" class="btn-primary"><i class="fas fa-phone"></i> <span>اطلب الخدمة</span></a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-award"></i> الأفضل في مدينة الرياض</div>
+                <h1>بيت <span class="highlight">الرياض</span><br>لخدمات النجارة</h1>
+                <div class="hero-tagline">خبرة واحترافية في كل تفصيلة</div>
+                <p class="hero-desc">نقدم لكم أفضل خدمات فك وتركيب الأثاث، تجميع أثاث ايكيا، تركيب الأقفال الإلكترونية، وفتح الأبواب المغلقة بأيدي فنيين محترفين وأدوات حديثة تضمن لكم جودة لا مثيل لها.</p>
+                <div class="hero-buttons">
+                    <a href="tel:0546190770" class="btn-call"><i class="fas fa-phone-volume"></i> اتصل الآن</a>
+                    <a href="https://wa.me/966546190770" class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a>
+                </div>
+                <div class="hero-features">
+                    <div class="hero-feature"><i class="fas fa-check"></i> <span>فنيون محترفون</span></div>
+                    <div class="hero-feature"><i class="fas fa-check"></i> <span>أسعار تنافسية</span></div>
+                    <div class="hero-feature"><i class="fas fa-check"></i> <span>ضمان على الخدمة</span></div>
+                    <div class="hero-feature"><i class="fas fa-check"></i> <span>تنفيذ سريع</span></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="1.jpg" alt="بيت الرياض للنجارة">
+                </div>
+                <div class="hero-floating-card card-1">
+                    <div class="floating-icon"><i class="fas fa-star"></i></div>
+                    <div class="floating-info">
+                        <h4>+10 سنوات</h4>
+                        <p>من الخبرة</p>
+                    </div>
+                </div>
+                <div class="hero-floating-card card-2">
+                    <div class="floating-icon"><i class="fas fa-users"></i></div>
+                    <div class="floating-info">
+                        <h4>+1500 عميل</h4>
+                        <p>سعيد بخدمتنا</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">خدماتنا</div>
+                <h2 class="section-title">خدمات متكاملة بجودة عالية</h2>
+                <p class="section-subtitle">نقدم مجموعة شاملة من خدمات النجارة والفك والتركيب لتلبية جميع احتياجاتكم بأعلى معايير الجودة</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-number">01</div>
+                    <div class="service-icon"><i class="fas fa-couch"></i></div>
+                    <h3>فك وتركيب الأثاث</h3>
+                    <p>فك وتركيب جميع أنواع غرف النوم والمجالس والمكاتب وغرف الأطفال باحترافية عالية مع الحفاظ على جميع القطع وضمان إعادة التجميع بنفس الجودة الأصلية.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-number">02</div>
+                    <div class="service-icon"><i class="fas fa-boxes-stacked"></i></div>
+                    <h3>تجميع أثاث ايكيا</h3>
+                    <p>تجميع جميع منتجات IKEA بسرعة ودقة متناهية وفقاً للتعليمات الأصلية، مع استخدام الأدوات المناسبة لكل قطعة وضمان التركيب الصحيح 100%.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-number">03</div>
+                    <div class="service-icon"><i class="fas fa-lock"></i></div>
+                    <h3>الأقفال الإلكترونية</h3>
+                    <p>تركيب وبرمجة جميع أنواع الأقفال الذكية والإلكترونية للمنازل والشقق والمكاتب مع شرح كامل لطريقة الاستخدام وضمان شامل على التركيب.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-number">04</div>
+                    <div class="service-icon"><i class="fas fa-door-open"></i></div>
+                    <h3>فتح الأبواب المغلقة</h3>
+                    <p>فتح جميع أنواع الأبواب المغلقة بدون أي إتلاف باستخدام أدوات احترافية متخصصة، مع خدمة طوارئ متاحة على مدار الساعة طوال أيام الأسبوع.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-number">05</div>
+                    <div class="service-icon"><i class="fas fa-door-closed"></i></div>
+                    <h3>تركيب الأبواب الخشبية</h3>
+                    <p>تركيب وضبط الأبواب الداخلية والخارجية بجودة عالية وتشطيب احترافي، مع ضمان المحازاة الصحيحة وسلاسة الفتح والإغلاق لسنوات طويلة.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-number">06</div>
+                    <div class="service-icon"><i class="fas fa-box"></i></div>
+                    <h3>الدواليب والخزائن</h3>
+                    <p>تركيب جميع أنواع الدواليب والخزائن مع ضبط المفصلات والأبواب بشكل مثالي، لضمان الاستخدام الأمثل وطول العمر الافتراضي للأثاث.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-number">07</div>
+                    <div class="service-icon"><i class="fas fa-image"></i></div>
+                    <h3>المرايات واللوحات</h3>
+                    <p>تركيب المرايات واللوحات والديكورات الحائطية بدقة وأمان باستخدام مسامير ومثبتات عالية الجودة تتحمل الأوزان المختلفة وتضمن الثبات.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-number">08</div>
+                    <div class="service-icon"><i class="fas fa-hammer"></i></div>
+                    <h3>النجارة المنزلية</h3>
+                    <p>تنفيذ جميع أعمال النجارة والتركيبات الخشبية وتشطيبات المنازل باحترافية، بما في ذلك الإصلاحات الصغيرة والكبيرة بأعلى جودة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">آلية العمل</div>
+                <h2 class="section-title">كيف نعمل معكم؟</h2>
+                <p class="section-subtitle">نتبع منهجية عمل واضحة ومنظمة لضمان تقديم أفضل خدمة لعملائنا الكرام</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step reveal">
+                    <div class="process-number">1</div>
+                    <h3>التواصل والاستفسار</h3>
+                    <p>تواصل معنا عبر الهاتف أو الواتساب وأخبرنا بنوع الخدمة المطلوبة وسنقدم لك الاستشارة المجانية</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-number">2</div>
+                    <h3>عرض السعر</h3>
+                    <p>نقدم لك عرض سعر مفصل وشفاف بدون أي رسوم خفية، مع إمكانية المعاينة المجانية للموقع</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-number">3</div>
+                    <h3>تحديد الموعد</h3>
+                    <p>نحدد معك الموعد المناسب لزيارتك في الوقت الذي يناسبك، مع الالتزام التام بالمواعيد المحددة</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-number">4</div>
+                    <h3>تنفيذ العمل</h3>
+                    <p>يقوم فريقنا المحترف بتنفيذ العمل بأعلى معايير الجودة والاحترافية مع ضمان شامل على الخدمة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label" style="color: var(--champagne-light);">معرض الأعمال</div>
+                <h2 class="section-title">نماذج من إبداعاتنا</h2>
+                <p class="section-subtitle">شاهد بعضاً من أعمالنا المنفذة التي تعكس مستوى الاحترافية والجودة التي نقدمها</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal" onclick="openLightbox('1.jpg')">
+                    <img src="1.jpg" alt="تركيب أثاث">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>تركيب غرف نوم</h4>
+                            <p>جودة واحترافية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox('2.jpg')">
+                    <img src="2.jpg" alt="تجميع ايكيا">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>تجميع ايكيا</h4>
+                            <p>دقة في التركيب</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox('3.jpg')">
+                    <img src="3.jpg" alt="أقفال إلكترونية">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>أقفال ذكية</h4>
+                            <p>تقنية حديثة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox('4.jpg')">
+                    <img src="4.jpg" alt="أبواب خشبية">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>أبواب خشبية</h4>
+                            <p>تشطيب احترافي</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox('5.jpg')">
+                    <img src="5.jpg" alt="نجارة منزلية">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>أعمال نجارة</h4>
+                            <p>إبداع في التنفيذ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+        <img id="lightboxImg" src="" alt="">
+    </div>
+
+    <section class="why-us" id="why-us">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">مميزاتنا</div>
+                <h2 class="section-title">لماذا تختار بيت الرياض؟</h2>
+                <p class="section-subtitle">نتميز بمجموعة من المزايا التي تجعلنا الخيار الأول لعملائنا في مدينة الرياض وخارجها</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-medal"></i></div>
+                    <h3>خبرة طويلة</h3>
+                    <p>أكثر من 10 سنوات من الخبرة المتراكمة في مجال النجارة وفك وتركيب الأثاث بمختلف أنواعه وأشكاله</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                    <h3>أسعار مناسبة</h3>
+                    <p>نقدم أفضل الأسعار التنافسية في السوق مع الحفاظ على أعلى مستويات الجودة والاحترافية في العمل</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>سرعة التنفيذ</h3>
+                    <p>الالتزام التام بالمواعيد المحددة وإنجاز العمل بأسرع وقت ممكن دون التأثير على جودة العمل المنجز</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>جودة مضمونة</h3>
+                    <p>ضمان شامل على جميع الأعمال المنفذة مع استخدام أفضل المواد والأدوات المتاحة في السوق</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+                    <h3>أدوات حديثة</h3>
+                    <p>نستخدم أحدث الأدوات والمعدات العالمية لضمان دقة وجودة العمل المنجز بأعلى المعايير</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-map-location-dot"></i></div>
+                    <h3>تغطية شاملة</h3>
+                    <p>نغطي جميع أحياء ومناطق مدينة الرياض وضواحيها بخدمة متميزة وسريعة تصلكم أينما كنتم</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">آراء العملاء</div>
+                <h2 class="section-title">ماذا يقول عملاؤنا عنا؟</h2>
+                <p class="section-subtitle">نفخر بثقة عملائنا الكرام وتقييماتهم الإيجابية التي تعكس مستوى الخدمة الذي نقدمه</p>
+            </div>
+            <div class="testimonials-wrapper reveal">
+                <div class="testimonials-track">
+                    <div class="testimonials-slides" id="slides">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">خدمة ممتازة بكل المقاييس، تم فك وتركيب الأثاث بسرعة واحترافية عالية. التعامل راقي جداً والنتيجة فاقت توقعاتي بمراحل. أنصح بالتعامل معهم بشدة لكل من يبحث عن الجودة والالتزام.</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">أ</div>
+                                <div class="author-info">
+                                    <h4>أحمد محمد العتيبي</h4>
+                                    <span>حي النرجس - الرياض</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">أفضل من تعاملت معه في تركيب أثاث ايكيا، دقة متناهية في العمل واحترام تام للمواعيد المحددة. الأسعار معقولة جداً مقارنة بجودة العمل المقدمة. شكراً لفريق بيت الرياض الرائع.</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">ف</div>
+                                <div class="author-info">
+                                    <h4>فاطمة الشمري</h4>
+                                    <span>حي الياسمين - الرياض</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">تم تركيب القفل الإلكتروني وفتح الباب بدون أي تلف أو خدش، أنصح بالتعامل معهم بشدة. شغل نظيف ومرتب جداً والالتزام بالموعد كان ممتازاً. سأتعامل معهم مرة أخرى بالتأكيد.</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">خ</div>
+                                <div class="author-info">
+                                    <h4>خالد القحطاني</h4>
+                                    <span>حي الملقا - الرياض</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-nav">
+                    <button class="testimonial-dot active" onclick="goToSlide(0)"></button>
+                    <button class="testimonial-dot" onclick="goToSlide(1)"></button>
+                    <button class="testimonial-dot" onclick="goToSlide(2)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">الأسئلة الشائعة</div>
+                <h2 class="section-title">أسئلة متكررة من عملائنا</h2>
+                <p class="section-subtitle">إجابات شاملة على أكثر الأسئلة شيوعاً التي يطرحها عملاؤنا الكرام</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item reveal">
+                    <div class="faq-question"><span>ما هي المناطق التي تخدمونها في الرياض؟</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>نغطي جميع أحياء ومناطق مدينة الرياض وضواحيها بما في ذلك شمال الرياض، جنوب الرياض، شرق وغرب الرياض، وجميع الأحياء السكنية والتجارية. كما نمتد إلى المدن المجاورة حسب الطلب.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question"><span>هل تقدمون ضمان على الأعمال المنفذة؟</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>نعم، نقدم ضمان شامل على جميع الأعمال المنفذة. في حال وجود أي مشكلة ناتجة عن التركيب أو الفك، نقوم بمعالجتها مجاناً في أقرب وقت ممكن دون أي تكاليف إضافية على العميل.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question"><span>كم تستغرق عملية فك وتركيب الأثاث؟</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>يعتمد الوقت على حجم ونوع الأثاث، لكن عادةً ما يتم فك وتركيب غرفة النوم الكاملة خلال 2-4 ساعات، بينما تستغرق القطع الصغيرة وقتاً أقل. نحرص دائماً على إنجاز العمل بأسرع وقت مع الحفاظ على الجودة.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question"><span>هل تعملون في أيام العطل والأعياد؟</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>نعم، نحن متاحون طوال أيام الأسبوع بما في ذلك أيام العطل الرسمية والأعياد، ويمكنكم التواصل معنا في أي وقت للحصول على الخدمة. نحن نعمل من الساعة 8 صباحاً حتى 10 مساءً.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question"><span>ما هي طرق الدفع المتاحة لديكم؟</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>نقبل الدفع النقدي، التحويل البنكي، ومدى. كما يمكن الدفع بعد الانتهاء من العمل والتأكد من جودته ورضاكم التام عنه. نوفر أيضاً خيارات دفع مرنة للمشاريع الكبيرة.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question"><span>هل يمكنني الحصول على عرض سعر مسبق؟</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>بالتأكيد، يمكنك التواصل معنا عبر الهاتف أو الواتساب وإرسال صور للأثاث أو العمل المطلوب، وسنقدم لك عرض سعر دقيق ومفصل مجاناً بدون أي التزام. المعاينة المجانية متاحة أيضاً للمشاريع الكبيرة.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="areas">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">مناطق الخدمة</div>
+                <h2 class="section-title">نصل إليكم في كل مكان</h2>
+                <p class="section-subtitle">نغطي جميع أحياء ومناطق مدينة الرياض وضواحيها بخدمات متميزة وسريعة</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>شمال الرياض</h4></div>
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>جنوب الرياض</h4></div>
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>شرق الرياض</h4></div>
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>غرب الرياض</h4></div>
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>وسط الرياض</h4></div>
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>الملقا</h4></div>
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>الياسمين</h4></div>
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>النرجس</h4></div>
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>الربوة</h4></div>
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>العليا</h4></div>
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>السليمانية</h4></div>
+                <div class="area-card reveal"><i class="fas fa-location-dot"></i><h4>حي الورود</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta" id="contact">
+        <div class="contact-cta-content reveal">
+            <div class="section-label" style="color: var(--champagne-light);">تواصل معنا</div>
+            <h2>هل تحتاج <span>نجار محترف</span> في الرياض؟</h2>
+            <p>تواصل مع بيت الرياض الآن للحصول على أفضل خدمات فك وتركيب الأثاث، تجميع أثاث ايكيا، تركيب الأقفال الإلكترونية، وفتح الأبواب المغلقة بسرعة وجودة عالية. فريقنا المحترف جاهز لخدمتكم في أي وقت.</p>
+            <div class="contact-phone"><i class="fas fa-phone-volume"></i> 0546190770</div>
+            <div class="contact-buttons">
+                <a href="tel:0546190770" class="btn-cta-primary"><i class="fas fa-phone"></i> اتصال الآن</a>
+                <a href="https://wa.me/966546190770" class="btn-cta-secondary" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-hammer"></i> بيت الرياض</h3>
+                    <p>شركة متخصصة في تقديم خدمات النجارة وفك وتركيب الأثاث بأعلى معايير الجودة والاحترافية في مدينة الرياض وضواحيها. نضمن لك خدمة متميزة ونتائج مبهرة تفوق توقعاتك.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/966546190770" target="_blank" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:0546190770" aria-label="اتصال"><i class="fas fa-phone"></i></a>
+                        <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#services">فك وتركيب الأثاث</a></li>
+                        <li><a href="#services">تجميع أثاث ايكيا</a></li>
+                        <li><a href="#services">الأقفال الإلكترونية</a></li>
+                        <li><a href="#services">فتح الأبواب</a></li>
+                        <li><a href="#services">النجارة المنزلية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#gallery">أعمالنا</a></li>
+                        <li><a href="#why-us">لماذا نحن</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:0546190770">0546190770</a></div>
+                    <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/966546190770" target="_blank">واتساب</a></div>
+                    <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>مدينة الرياض، السعودية</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-clock"></i><span>8 صباحاً - 10 مساءً</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © 2026 <strong style="color: var(--champagne);">بيت الرياض</strong> | تصميم وتسويق <a href="https://gulf-marketing.com/" target="_blank">الخليج</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-btns">
+        <a href="https://wa.me/966546190770" class="float-btn whatsapp" target="_blank" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:0546190770" class="float-btn call" aria-label="اتصال"><i class="fas fa-phone"></i></a>
+    </div>
+
+    <script>
+        // Loader
+        window.addEventListener('load', () => { setTimeout(() => { document.getElementById('loader').classList.add('hidden'); }, 800); });
+        
+        // Header Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+        
+        // Mobile Menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.querySelector('i').classList.add('fa-bars');
+                mobileToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+        
+        // Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.12 });
+        revealElements.forEach(el => revealObserver.observe(el));
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+        
+        // Testimonials Carousel
+        let currentSlide = 0;
+        const slides = document.getElementById('slides');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        function goToSlide(index) {
+            currentSlide = index;
+            slides.style.transform = `translateX(${index * 100}%)`;
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+        }
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % 3;
+            goToSlide(currentSlide);
+        }, 5000);
+        
+        // Lightbox
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            document.getElementById('lightboxImg').src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 85;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
